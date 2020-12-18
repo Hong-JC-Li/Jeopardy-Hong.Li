@@ -60,12 +60,15 @@ function questionOnClick(categoryIndex, moneyValue) {
   $("#question-modal-text").html(question.question_text);
   $("#question-modal-show-answer")
     .click(() => {
+      $("#question-modal-text").html(question.answer_text);
       // Add code here
       console.log("I just got clicked, I wish I could do more though!");
     })
     .show();
 
   $("#question-modal-close").click(() => {
+    hideQuestionPopup();
+    attachClickHandlers();
     // Add code here
     console.log("I just got clicked, I wish I could do more though!");
   });
